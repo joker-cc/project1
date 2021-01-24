@@ -1,4 +1,6 @@
 const ADD_ITEM = "ADD_ITEM";
 const DELETE_ITEM = "DELETE_ITEM";
+const SAVE_LIST = "SAVE_LIST";
+const GET_LIST = "GET_LIST";
 
-export { ADD_ITEM, DELETE_ITEM };
+export { ADD_ITEM, DELETE_ITEM, SAVE_LIST, GET_LIST };

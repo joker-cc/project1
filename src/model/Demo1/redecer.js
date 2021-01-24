@@ -1,4 +1,4 @@
-import { ADD_ITEM, DELETE_ITEM } from './actionType';
+import { ADD_ITEM, DELETE_ITEM, SAVE_LIST } from './actionType';
 
 const defaultState = {
   list: [ 1, 2 ],
@@ -18,6 +18,12 @@ const reducer = (state = defaultState, action) => {
       return {
         ...state,
         list: state.list.filter((item, index) => index !== data),
+      };
+    }
+    case SAVE_LIST: {
+      return {
+        ...state,
+        list: data,
       };
     }
     default: return state;

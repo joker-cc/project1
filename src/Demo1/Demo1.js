@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import store from '../model/store';
-import { addItemAction, deleteItemAction } from '../model/Demo1/actionCreator.js';
+import { addItemAction, deleteItemAction, getListAction } from '../model/Demo1/actionCreator.js';
 
 const Demo1 = () => {
   const [ list, setList ] = useState(store.getState().list);
@@ -14,6 +14,10 @@ const Demo1 = () => {
     store.subscribe(updateList);
   }, []);
   /*********************************************/
+
+  useEffect(() => {
+    store.dispatch(getListAction());
+  }, []);
 
   const onInputChange = useCallback(
     ({ target: { value } }) => {
