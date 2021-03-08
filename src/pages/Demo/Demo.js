@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import store from '../model/store';
-import { addItemAction, deleteItemAction, getListAction } from '../model/Demo1/actionCreator.js';
+import store from '../../model/store';
+import { addItemAction, deleteItemAction, getListAction } from '../../model/Demo/actionCreator.js';
 
-const Demo1 = () => {
+const Demo = props => {
   const [ list, setList ] = useState(store.getState().list);
   const [ inputValue, setInputValue ] = useState('');
   
@@ -47,6 +47,7 @@ const Demo1 = () => {
 
   return (
     <>
+      <div>{props.match.params.title}</div>
       <ul>
         {
           list.map((item, index) => <li key={item} onClick={onItemClick(index)}>{item}</li>)
@@ -58,4 +59,4 @@ const Demo1 = () => {
   );
 }
 
-export default Demo1;
+export default Demo;
