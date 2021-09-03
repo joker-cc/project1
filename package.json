@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "axios": "^0.21.1",
-    "immer": "^8.0.1",
+    "immer": "^9.0.6",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dnd": "^13.1.1",
